@@ -49,7 +49,7 @@ class Controller:
               'UPDATE - обновить заметку\n'
               'DELITE - удалить заметку\n'
               'EXIT - выход из программы')
-        file_name = "nones.csv"
+        file_name = "notes.csv"
         com = Commands.NONE
         flag = True
         while flag:
