@@ -2,6 +2,9 @@ from enum import Enum
 
 
 class Commands(Enum):
+    """
+    Команды для выполнения действий над заметками
+    """
     NONE = 0
     ADD = 1
     READ = 2

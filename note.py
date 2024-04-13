@@ -1,5 +1,7 @@
-
 class Note:
+    """
+    Класс создания тыпа данных Note
+    """
     def __init__(self, id_note: int, title: str, body: str, date: str):
         self.id = id_note
         self.title = title

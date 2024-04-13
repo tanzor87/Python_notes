@@ -6,11 +6,24 @@ from model_file import ModelFile
 
 
 def create_note(id_n, title_n, body_n, date_n):
+    """
+    Метод создает заметку
+    :param id_n: ID заметки
+    :param title_n: заголовок заметки
+    :param body_n: тело заметки
+    :param date_n: дата создания или изменения заметки
+    :return: тип данных Note
+    """
     note = Note(id_n, title_n, body_n, date_n)
     return note
 
 
 def create_note_input(notes: List[Note]):
+    """
+    Метод создания заметки и добавления ее в список заметок введенных из консоли
+    :param notes: Список заметок, либо пустой список
+    :return: список заметок
+    """
     id = int(input("Введите номер заметки: "))
     title = input("Введите заголовок заметки: ")
     body = input("Введите тело заметки: ")
@@ -21,8 +34,15 @@ def create_note_input(notes: List[Note]):
 
 
 class Controller:
+    """
+    Класс запуска комманд выполняющих действия над заметками
+    """
 
     def run(self) -> None:
+        """
+        Метод позволяющий выполнять какие-либо действия с заметками (например выводить все заметки, изменять заметки)
+        :return: None
+        """
         print('Список комманд:\n'
               'ADD - добавить новую заметку\n'
               'LIST - вывести список заметок\n'

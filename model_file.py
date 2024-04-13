@@ -2,7 +2,10 @@ from typing import List
 from note import Note
 
 
-class ModelFile():
+class ModelFile:
+    """
+    Класс записи заметок в файл и чтения заметок из файла
+    """
     def __init__(self, file_name: str):
         self.file_name = file_name
         try:
@@ -12,6 +15,11 @@ class ModelFile():
             print(e)
 
     def save_note_to_file(self, notes: List[Note]) -> None:
+        """
+        Метод сохранения списка заметок в файл
+        :param notes: Список заметок
+        :return: None
+        """
         try:
             with open(self.file_name, 'w') as fw:
                 for note in notes:
@@ -21,6 +29,10 @@ class ModelFile():
             print(e)
 
     def get_notes(self):
+        """
+        метод получения списка заметок из файла
+        :return: список заметок
+        """
         notes = []
         try:
             with open(self.file_name, 'r') as file:
@@ -33,6 +45,4 @@ class ModelFile():
         except Exception as e:
             print(e)
 
-        # print(notes)
         return notes
-
